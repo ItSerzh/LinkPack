@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="../../tests/LinkPack.IntegrationTests/LinkPack.IntegrationTests.csproj" />
+  <Project Path="../../tests/LinkPack.Tests/LinkPack.UnitTests/LinkPack.UnitTests.csproj" />
+  <Project Path="../LinkPack.Application/LinkPack.Application.csproj" />
+  <Project Path="../LinkPack.Domain/LinkPack.Domain.csproj" />
+  <Project Path="../LinkPack.Infrastructure/LinkPack.Infrastructure.csproj" />
+  <Project Path="LinkPack.Api.csproj" />
+</Solution>
