@@ -14,4 +14,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LinkPack.Application\LinkPack.Application.csproj" />
+    <ProjectReference Include="..\LinkPack.Infrastructure\LinkPack.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
