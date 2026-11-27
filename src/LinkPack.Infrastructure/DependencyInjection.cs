@@ -1,4 +1,10 @@
-﻿using LinkPack.Infrastructure.Persistence.EF;
+﻿using LinkPack.Application;
+using LinkPack.Application.Users;
+using LinkPack.Infrastructure.Persistence.EF;
+using LinkPack.Infrastructure.Persistence.EF.Repositories;
+using LinkPack.Infrastructure.Persistence.EF.UnitOfWork;
+using LinkPack.Infrastructure.Security;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +20,10 @@ public static class DependencyInjection
         {
             options.UseNpgsql(configuration.GetConnectionString("PgConnection"));
         });
+
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IPasswordHashService, PasswordHashService>();
 
         return services;
     }
